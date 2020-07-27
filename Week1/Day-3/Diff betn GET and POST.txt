@@ -1,0 +1,8 @@
+Q.Diffrence between GET and POST requests?
+Soln.
+1) GET method passes request parameter in URL String while POST method passes the request parameter in request body.
+2) GET method only allows ASCII characters while POST has no restrictions.Binary data is also allowed.
+3) GET request can only pass limited amount of data while POST method can pass large amount of data to server.
+4) GET requests can be bookmarked unlike POST requests.
+5) GET is mostly used for view purpose while POST is mainly use for update purpose.
+6) GET can be cached but POST cannot be cached.

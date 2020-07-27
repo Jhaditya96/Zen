@@ -1,0 +1,21 @@
+Q.Auth & CORS?
+Soln.
+=>Authorization header
+
+-The Authroization HTTP header is provided with authentication info on respective request.When someone gives wrong response
+it will reject its authentication with 401 response with a WWW=Authenticate header.This triggers the browser to ask for 
+user credentials.The browser also performs the same request,but include an Authorization header with entered credentials.
+
+=>CORS
+
+-The Cross Origin Resourse Sharing is a security mechanism that allows a web page to access one domain with diffrent domain
+ It provides relaxation of the same-origin policy implemented in browsers.
+
+-CORS sends an Authorization header along with a request to another site which has to notify the browser of its permission.
+ After all,not all sites are authorized to provide access e.g. like bank sites.However,there are some cases for cross-site
+ access.In that case,the CORS HTTP response header can grant access to the other domain and so the application that handles 
+ the request has to give its permission to be used.This permission can be given by server with credentials  by either the
+ browser or from your Authentication with Authorization header.
+ E.g.When Browser support HTTP basic authentication with username and password and sends it with every sebsequent request.
+     OR when this Authorization header is sent with a request from JavaScript by just specifying the name and value of the 
+     header.It works just like basic authentication only.

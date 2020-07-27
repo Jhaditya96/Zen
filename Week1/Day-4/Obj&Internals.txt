@@ -1,0 +1,82 @@
+Q.Write a blog about Objects and its internal representation in JavaScript
+Soln.Objects,in JS, is its most important data-type.An object is a reference data type which are assigned with a reference
+     value given a pointer to its values.This pointer points to the location in memory where the object is stored.
+Basically,It`s an unordered collection of related data,of primitve or reference types,in the form of "key:value: pairs.
+These Objects are created with {...} with an optional list of properties.A property is "key:value" pair,where a key is a 
+string(also called a "property name"), and value can be anything.
+E.G.
+let college = {
+name : “Sardar Patel Institute Of Technology”,
+location : “Mumbai”,
+established : “1950s”
+}
+
+1.Each of these keys is referred to as properties of the object. An object in JavaScript may also have a function as a 
+  member, in which case it will be known as a method of that object.
+  Like:
+let college = {
+name : "Sardar Patel Institute Of Technology",
+location : "Mumbai",
+established : "1950s"
+displayInfo : function(){
+console.log(  ${college.name}
+              was established in
+ 	      ${college.established}
+	      at
+	      ${college.location}
+	   );
+}}
+college.displayInfo();
+
+2.The property names can be strings or numbers. In case the property names are numbers, they must be accessed using the 
+"bracket notation" like this :
+let college = {
+name : "Sardar Patel Institute Of Technology",
+location : "Mumbai",
+established : "1950s"
+20 : 1000,
+college.displayInfo();
+displayInfo : function(){
+console.log(The value of the key 20 is ${college['20']});
+}
+}
+college.displayInfo();
+
+3.Object Constructor : Another way to create objects in JavaScript involves using the “Object” constructor. The Object 
+constructor creates an object wrapper for the given value. This, used in conjunction with the “new” keyword allows us to 
+initialize new objects.
+E.g. :
+const school = new Object();
+college.name = 'Sardar Patel';
+college.locn = 'Mumbai';
+college.est = 1950;
+
+college.displayInfo = function(){
+console.log(${college.name} was established
+in ${college.established} at ${college.location});
+}
+
+college.displayInfo();
+
+Also,
+function Vehicle(name, maker) {
+this.name = name;
+this.maker = maker;
+}
+
+let car1 = new Vehicle('Fiesta', ‘Ford’);
+let car2 = new Vehicle('Santa Fe', 'Hyundai')
+
+console.log(car1.name); 
+console.log(car2.name);
+
+4.Object.fromEntries() — In this method transforms a list of key-value pairs into an object.
+E.g.
+const entries = new Map([
+['foo', 'bar'],
+['bach', 42]
+]);
+const obj = Object.fromEntries(entries);
+console.log(obj);
+// expected output: Object { foo: “bar”, bach: 42 }
+

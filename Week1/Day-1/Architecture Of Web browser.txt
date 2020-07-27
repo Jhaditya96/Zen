@@ -1,0 +1,42 @@
+TOPIC:STRUCTURE OF WEB BROWSER
+
+Web Browser is an application software that allows us to view and explore information on the web. User can request for any web page by just entering a URL into 
+address bar.Web browsers can show text, audio, video, animation and more. It is the responsibility of a web browser to interpret text and commands contained in the
+web page.Earlier the web browsers were text-based while now a days graphical-based or voice-based web browsers are also available
+		Technically,A Web browser is referred to as an application that provides access to a Web server. Depending on the implementation, browser 
+capabilities and thus structures vary. A Web browser, at a minimum, consists of an Hypertext Markup Language (HTML) interpreter and HTTP client that is used to 
+retrieve HTML Web pages.Besides this basic requirement, many browsers also support FTP, NNTP, e-mail (POP and SMTP clients), among other features, with an 
+easy-to-manage graphical interface.
+Main components of Web Browser`s are:
+
+1.User Interface
+  It provides the methods with which a user inter-acts with the Browser Engine.This includes the address bar,back/forward button,bookmarking menu,etc.Every part of
+the browser display except the window where you see the requested page.
+
+2.The Browser Engine
+  It marshals actions between the UI and the rendering engine.This provides a high-level interface to the Rendering Engine.The Browser Engine provides methods to
+initiate the loading of a URL and other high-level browsing actions (reload,back,forward).The Browser Engine also probides the UI with various messages relating to 
+error messages and loading progress.
+
+3.Rendering Engine
+  It produces the visual representation of a given URL.The Rendering Engine interprets the HTML,XML,and JavaScript that comprises a given URL and genreates the 
+layout that is displayed in the UI.A key component of the Rendering Engine is the HTML parser,This HTML parser is quite complex because it allows the Rendering 
+Engine to display poorly formed HTML pages. Diffent browsers use different rendering engines:Internet Explorer uses Trident,Firefix uses Gecko,Safari uses WebKit.
+Chrome and Opera use Webkit(bofore is Blink).
+
+4.Networking
+ It provides funtionality to handle retrieval of URLs using the common Internet protocols of HTTP and FRP,THe Netweorking components handle all aspects of Internet 
+communication and security,character set translations and MIME type resolution.The Network component may  implement a chache of retrieved documents to 
+minimize network traffic.
+
+5.JavaScript Interpreter
+ This component executes the JavaScript code that is embedded in a webiste.Result of the execution a passed to the Rendering Engine for display.The Rendering 
+Engine may disable various actions based on user defined properties.
+
+6.The UI backend
+-Used for drawing basic widgers like combo boxes and windows.
+-Underneath it uses operationg system user interface methods.
+
+7.The Data Storage
+ It manages user data such as bookmarks,cookies and preferences.The new HTML specification(HTML5) defines 'web database' which is a complete (although light)
+database in the browser.

@@ -1,0 +1,18 @@
+Q.Is it necessary to write HEAD,Body and HTML tags?
+Soln.Yes,It is very necessary.The tags sometimes decide in large part on the ranking that controls your website behind the
+scenes.Technically speaking, meta tags are HTML tags, they appear in specific places located within the header 
+tags (for example, <head> </head>).These tags often are convinient to use while prototyping and especially when 
+writing test cases as it helps keep the mark-up focused on the test in question. The inference process should create the 
+elements in exactly the manner that you see in Firebug, and browsers are pretty consistent in doing that.
+The main reasons why tagging your website is important are:
+1. Extremely important for Search Engines Results.
+2. Your page rankings are effected by the Meta Tags.
+3. Helps your visitors and web crawlers understand the contents of each web page.
+4. Makes your code more systematic and easier to understand with sensible tags and operation intented to put there.
+
+Hint: It is not wise to fill the keyword tags with words that aren’t part of your web page. Actually, the major search 
+engines (Google, for example) aren’t using this tag anymore. However, the smaller search engines continue to use this tag 
+in their search engine rankings; in other words, the keyword tag can determine where your website is placed in comparison 
+to your competitors for a particular keyword or keyword phrase.
+
+e.g.<Title> Your Website Title </Title>
