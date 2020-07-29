@@ -95,12 +95,12 @@ Don`t tell users not working unless absolutely necessary.
 
 -Fatal Errors
 The application absolutely cannot continue.
-Sighnificat interfernce with user`s ability to be productive
+Significat interfernce with user`s ability to be productive
 Message the user immediately
 Reload
 
 Fatal or Non-fatal?
-Do not allow your code to determine what is and is not fatal(watch out for loops)
+Don`t allow your code to determine what is and is not fatal(watch out for loops)
 
 #Rule 7:Provide a debug mode
 -Assign a variable that is globally available
