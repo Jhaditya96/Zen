@@ -1,0 +1,180 @@
+body
+{
+  padding:0px;
+  margin:0px;
+  font-family: sans-serif;
+  color:white;
+}
+
+.outer-container
+{
+  width:600px;
+  margin:auto;
+  background-color:#303E47;
+  padding-bottom: 62px;
+
+}
+span
+{
+  display:inline-block
+}
+header
+{
+  padding-top:56px;
+  text-align:center;
+  height: 117px;
+}
+.obestat
+{
+  font-size: 48px;
+  font-weight: 600;
+  text-align: left;
+  color: #FF595C;
+  font-family: sans-serif;
+}
+.stat
+{
+  text-align: left;
+  color: white;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+#oneinthreeBox
+{
+  width:500px;
+  margin:auto;
+  text-align:center;
+  color:white;
+}
+.box-1
+{
+  float:left;
+  background-color:#FF9E1B;
+  width:250px; 
+  padding-top:20px;
+  height:290px;
+}
+.box-2
+{
+  float:left;
+  background-color:#00B2E2;
+  width:250px; 
+  padding-top:20px;  
+  height:290px;
+}
+.box-3
+{
+  width:205px;
+  float:left;
+}
+.box-4
+{
+  width:257px;
+  float:left;
+}
+.box-5
+{
+  width:227px;
+  float:left;
+  text-align:left;
+}
+.box-6
+{
+  width:227px;
+  float:left;
+  text-align:left;
+  padding-left:10px
+}
+.box-7
+{
+  float:left;
+  background-color:#FF5959;
+  width:250px; 
+  padding-top:20px; 
+  height:250px;
+}
+.box-8
+{
+  float:left;
+  background-color:#FF9E1B;
+  width:250px; 
+  padding-top:20px;  
+  height:250px;
+}
+.box-9
+{
+  float:left;
+  background-color:#00B2E2; 
+  width:250px; 
+  padding-top:20px; 
+  height:250px;
+}
+.box-10
+{
+  float:left;
+  background-color:#FF5959;
+  width:250px; 
+  padding-top:20px;  
+  height:250px;
+}
+#obestatlinkTAG
+{
+ padding: 28px 18px 28px 20px;
+ background-color: #FF5959;
+ width: 467px;
+ margin: auto;
+ text-align: center;
+ color: white;
+ margin-top: 40px;
+}
+
+#RiskFactorTAG
+{
+ padding: 28px 18px 28px 20px;
+ background-color: #00B2E2;
+ width: 467px;
+ margin: auto;
+ text-align: center;
+ color: white;
+ margin-top: 40px;
+ padding: 20px 18px 28px 20px;
+}
+
+#FrenchFriesTAG
+{
+  width:500px;
+  margin:auto;
+  text-align:center;
+  color:white;
+  margin-top:40px
+}
+#ToddlerTAG
+{
+ padding: 28px 18px 28px 20px;
+ background-color: #FF5959;
+ width: 467px;
+ margin: auto;
+ text-align: center;
+ color: white;
+ margin-top: 40px;
+ background-color:#00B2E2;
+}
+#Pre-schoolTAG
+{
+ padding: 28px 18px 28px 20px;
+ background-color: #FF5959;
+ width: 467px;
+ margin: auto;
+ text-align: center;
+ color: white;
+ margin-top: 40px;
+ background-color:#FD9E1C;
+}
+#BillionsTAG
+{
+  width:500px;
+  margin:auto;
+  text-align:center;
+  color:white;
+  margin-top:40px
+}
