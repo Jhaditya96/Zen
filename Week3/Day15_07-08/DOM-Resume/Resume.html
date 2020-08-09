@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resume DOM</title>
+	<style type="text/css">
+		body{
+			padding:0px;
+			margin:0px;
+			background: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		//Header Section
+		let outer_div = document.createElement('div');
+		outer_div.setAttribute('style','width:1040px;margin:auto;background: white;margin-bottom:-14px');
+
+		let wd100 = document.createElement('div');
+		wd100.setAttribute('style','height:240px;background-color:#565656;text-align: center;width:100%;');
+
+		let brin = document.createElement('img');
+		brin.setAttribute('src','brin.PNG')
+		brin.setAttribute('style','padding: 37px;')
+		wd100.appendChild(brin);
+		
+
+		let username = document.createElement('h1');
+		username.innerHTML = 'Aditya Jha';
+		username.setAttribute('style','background-color: #e9b83f;position: absolute;left: 36%;top: 176px;                     width: 370px;padding-top: 41px;padding-bottom: 41px;border-radius: 10px;font-size: revert;');
+
+		wd100.appendChild(username);
+		outer_div.appendChild(wd100);
+
+		let wd101 = document.createElement('div');
+		wd101.setAttribute('style','width:100%;height:60px;background-color:white;');
+
+		let wd102 = document.createElement('div');
+		wd102.setAttribute('style','width:100%;height:80px;background-color:#565656;');
+		
+		let random = document.createElement('div');
+		random.setAttribute('style','clear: both;');
+		outer_div.appendChild(wd101);
+		outer_div.appendChild(wd102);
+		outer_div.appendChild(random);
+
+		document.body.append(outer_div);
+
+		//Main Body
+		let outer_div2 = document.createElement('div');
+		outer_div2.setAttribute('style','width:1000px;margin:auto;background:white;padding-left:20px;padding-right:20px;  padding-bottom:60px;margin-bottom:30px;padding-top:-14px;height:750px;');
+
+		let wd103 = document.createElement('div');
+		wd103.setAttribute('style','width:100%;text-align:center;');
+
+		let pdy = document.createElement('h2');
+		pdy.setAttribute('style','font-size: 20px;padding:10px;');
+		pdy.innerText = 'volptatem accusantim dolorequ laudantim | 999-999-8888 | [email protected]| www.IpsumResume.com';
+
+		wd103.appendChild(pdy);	
+		outer_div2.append(wd103);
+
+		let wd104 = document.createElement('div');
+		wd104.setAttribute('style','width:100%;margin-left:25px;margin-right:25px;margin-top:15px;margin-bottom:15px;');
+
+		let wd104_2 = document.createElement('div');
+		wd104_2.setAttribute('style','padding-right: 24px; float:left;width:48%;border-right : 2px solid #ccc;');
+
+		let wd104_3 = document.createElement('div');
+		wd104_3.setAttribute('style','width:100%');
+
+		let wd104_4 = document.createElement('div');
+		wd104_4.setAttribute('style','display:flex;')
+
+		let profile_img = document.createElement('img');
+		profile_img.setAttribute('style','position: relative;left: -13px;width:85px');
+		profile_img.setAttribute('src','profile.PNG');
+		wd104_4.appendChild(profile_img);
+
+		let profile_heading = document.createElement('h2');
+		profile_heading.setAttribute('style','color:#555555; position:relative; left:-17px');
+		profile_heading.innerText = 'Profile';
+		wd104_4.appendChild(profile_heading);
+
+		wd104_3.appendChild(wd104_4);
+
+		let profile_descrip_div = document.createElement('div');
+		let profile_descip = document.createElement('p');
+		profile_descip.setAttribute('style','font-size:18px;')
+		profile_descip.innerText = 'Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
+
+		profile_descrip_div.appendChild(profile_descip);
+		wd104_3.appendChild(profile_descrip_div);
+
+
+		let skill_img_div = document.createElement('div');
+		skill_img_div.setAttribute('style','display:flex;');
+
+		let skill_img = document.createElement('img');
+		skill_img.setAttribute('src','skill.PNG');
+		skill_img.setAttribute('style','width:67px;');
+		skill_img_div.appendChild(skill_img);
+
+		let skill_header = document.createElement('h2');
+		skill_header.setAttribute('style','color:#555555');
+		skill_header.innerText = 'Skills';
+		skill_img_div.appendChild(skill_header);
+
+		wd104_3.appendChild(skill_img_div);
+
+		let outer_TechSkill_div = document.createElement('div');
+		outer_TechSkill_div.setAttribute('style','margin-bottom:15px;margin-top:25px;')
+
+		let Tech_skill_div = document.createElement('div');
+		Tech_skill_div.setAttribute('style','text-align:center; margin-bottom:10px;');
+		let Tech_skill_heading = document.createElement('b');
+		Tech_skill_heading.innerText = 'Techical Skills';
+		Tech_skill_div.appendChild(Tech_skill_heading);
+		wd104_3.appendChild(Tech_skill_div);
+
+		      //<div><span style="float:left; display:inline-block">Javascript</span>   <span style="float:right; display:inline-block"><img src="img/rng.PNG"/></span></div><div style="clear: both;"></div>
+
+
+		      //-----------------------------------------------------sub1
+		      let subbar_div = document.createElement('div');
+		      
+		      let subbar_span = document.createElement('span');
+		      subbar_span.setAttribute('style','float:left; display:inline-block;');
+		      subbar_span.innerText = 'Javascript';
+		      subbar_div.appendChild(subbar_span);
+
+		      let subbar_span_emp = document.createElement('div');
+		      subbar_span_emp.setAttribute('style','float:right; display:inline-block;');
+
+		      let subbar_img = document.createElement('img');
+		      subbar_img.setAttribute('src','rng.PNG');
+		      subbar_span_emp.appendChild(subbar_img);
+		      subbar_div.appendChild(subbar_span_emp);
+
+		      wd104_3.appendChild(subbar_div);
+
+		      let empty_div = document.createElement('div');
+		      empty_div.setAttribute('style','clear:both;');
+		      wd104_3.appendChild(empty_div);	
+		  	  //------------------------------------------------------sub2
+
+		  	  let subbar_div2 = document.createElement('div');
+
+		  	  let subbar_span2 = document.createElement('span');
+		  	  subbar_span2.setAttribute('style','float:left; display:inline-block;');
+		  	  subbar_span2.innerText = 'HTML/CSS';
+		  	  subbar_div2.appendChild(subbar_span2);
+
+		  	  let subbar_span_emp2 = document.createElement('div');
+		  	  subbar_span_emp2.setAttribute('style','float:right; display:inline-block;');
+
+		  	  let subbar_img2 = document.createElement('img');
+		  	  subbar_img2.setAttribute('src','rng.PNG');
+		  	  subbar_span_emp2.appendChild(subbar_img2);
+		  	  subbar_div2.appendChild(subbar_span_emp2);
+
+		  	  wd104_3.appendChild(subbar_div2);
+
+		  	  let empty_div2 = document.createElement('div');
+		  	  empty_div2.setAttribute('style','clear:both;');
+		  	  wd104_3.appendChild(empty_div2);
+
+		  	   //-----------------------------------------------------------sub3
+
+		  	   let subbar_div3 = document.createElement('div');
+
+		  	   let subbar_span3 = document.createElement('span');
+		  	   subbar_span3.setAttribute('style','float:left; display:inline-block;');
+		  	   subbar_span3.innerText = 'MongoDB';
+		  	   subbar_div3.appendChild(subbar_span3);
+
+		  	   let subbar_span_emp3 = document.createElement('div');
+		  	   subbar_span_emp3.setAttribute('style','float:right; display:inline-block;');
+
+		  	   let subbar_img3 = document.createElement('img');
+		  	   subbar_img3.setAttribute('src','rng.PNG');
+		  	   subbar_span_emp3.appendChild(subbar_img3);
+		  	   subbar_div3.appendChild(subbar_span_emp3);
+
+		  	   wd104_3.appendChild(subbar_div3);
+
+		  	   let empty_div3 = document.createElement('div');
+		  	   empty_div3.setAttribute('style','clear:both;');
+		  	   wd104_3.appendChild(empty_div3);
+
+		  	   //----------------------------------------------------------sub4
+
+		  	   let subbar_div4 = document.createElement('div');
+
+		  	   let subbar_span4 = document.createElement('span');
+		  	   subbar_span4.setAttribute('style','float:left; display:inline-block;');
+		  	   subbar_span4.innerText = 'DJango';
+		  	   subbar_div4.appendChild(subbar_span4);
+
+		  	   let subbar_span_emp4 = document.createElement('div');
+		  	   subbar_span_emp4.setAttribute('style','float:right; display:inline-block;');
+
+		  	   let subbar_img4 = document.createElement('img');
+		  	   subbar_img4.setAttribute('src','rng.PNG');
+		  	   subbar_span_emp4.appendChild(subbar_img4);
+		  	   subbar_div4.appendChild(subbar_span_emp4);
+
+		  	   wd104_3.appendChild(subbar_div4);
+
+		  	   let empty_div4 = document.createElement('div');
+		  	   empty_div4.setAttribute('style','clear:both;');
+		  	   wd104_3.appendChild(empty_div4);
+
+		  	   wd104_3.appendChild(outer_TechSkill_div);
+		  	  //------------------------------------------------end of Tech subjects secn.
+
+		  	  let work_ex_div = document.createElement('div');
+		  	  work_ex_div.setAttribute('style','display:flex;');
+
+		  	  let work_img = document.createElement('img');
+		  	  work_img.setAttribute('src','work.PNG');
+		  	  work_img.setAttribute('style','width:67px;');
+		  	  work_ex_div.appendChild(work_img);
+
+		  	  let work_header = document.createElement('h2');
+		  	  work_header.setAttribute('style','color:#555555');
+		  	  work_header.innerText = 'Work Experience';
+		  	  work_ex_div.appendChild(work_header);
+		  	  wd104_3.appendChild(work_ex_div);		
+
+		  	  let workex_description = document.createElement('div');
+		  	  workex_description.setAttribute('style','display:flex;');
+
+		  	  let work_ex_para = document.createElement('p');
+		  	  let work_ex_bold = document.createElement('b');
+		  	  work_ex_bold.setAttribute('style','font-size:20px;')
+		  	  work_ex_bold.innerText = 'Event Manager';
+
+		  	  workex_description.appendChild(work_ex_bold);
+		  	  workex_description.appendChild(work_ex_para);
+
+		  	  wd104_3.appendChild(workex_description);
+
+
+
+		  	  let workex_points = document.createElement('div');
+
+		  	  workex_points.setAttribute('style','display:flex;');
+
+		  	  let points = document.createElement('ul');
+		  	  points.setAttribute('style','padding-right:20px;');
+
+		  	  let ls1 = document.createElement('li');
+		  	  ls1.setAttribute('style','font-size:18px;')
+		  	  ls1.innerText = 'ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.';
+		  	  workex_points.appendChild(ls1);		        
+		  	  workex_points.appendChild(points);
+		  	  wd104_3.appendChild(workex_points);		
+
+		  	  wd104_2.appendChild(wd104_3);
+		  	  wd104.appendChild(wd104_2);
+
+		  	  let wd105 = document.createElement('div');
+		  	  wd105.setAttribute('style','float:right;width:48%;')
+
+		  	  let wd105_2 = document.createElement('div');
+		  	  wd105_2.setAttribute('style','display:flex;');
+
+		  	  let wordex_img = document.createElement('img');
+		  	  wordex_img.setAttribute('style','width:70px;');
+		  	  wordex_img.setAttribute('src','work.PNG');
+		  	  wd105_2.appendChild(wordex_img);
+
+		  	  let wordex_header = document.createElement('h2');
+		  	  wordex_header.setAttribute('style','color:#555555;padding-left:8px;');
+		  	  wordex_header.innerText = 'Work Experience[cont.]';
+		  	  wd105_2.appendChild(wordex_header);
+
+		  	  wd105.appendChild(wd105_2);
+
+		  	  let wd105_3 = document.createElement('div');
+		  	  let wd105_3_2 = document.createElement('div');
+
+		  	  let workex_para = document.createElement('p');
+		  	  workex_para.setAttribute('style','font-size:20px;font-weight:bold;')
+		  	  workex_para.innerText = 'Community Relations Manager';
+		  	  wd105_3_2.appendChild(workex_para);
+
+		  	  wd105_3.appendChild(wd105_3_2);
+
+		  	  let wd105_3_3 = document.createElement('div');
+
+		  	  let point = document.createElement('ul');
+		  	  point.setAttribute('style','padding-right:20px;');
+
+		  	  let ls01 = document.createElement('li');
+		  	  ls01.setAttribute('style','font-size:18px;')
+		  	  ls01.innerText = 'Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.';
+		  	  wd105_3_3.appendChild(ls01);	
+
+		  	  let ls02 = document.createElement('li');
+		  	  ls02.setAttribute('style','font-size:18px;')
+		  	  ls02.innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.';
+		  	  wd105_3_3.appendChild(ls02);		        
+		  	  wd105_3_3.appendChild(point);
+		  	  wd105_3.appendChild(wd105_3_3);
+		  	  wd105.appendChild(wd105_3);
+
+		  	  let wd105_4 = document.createElement('div');
+		  	  wd105_4.setAttribute('style','display:flex;');
+
+		  	  let edu_img = document.createElement('img');
+		  	  edu_img.setAttribute('style','width:70px;');
+		  	  edu_img.setAttribute('src','edu.PNG');
+		  	  wd105_4.appendChild(edu_img);
+
+		  	  let edu_header = document.createElement('h2');
+		  	  edu_header.setAttribute('style','color:#555555;padding-left:8px;');
+		  	  edu_header.innerText = 'Education Qualification';
+		  	  wd105_4.appendChild(edu_header);
+
+		  	  wd105.appendChild(wd105_4);
+
+		  	  let wd106 = document.createElement('div');
+
+		  	  let edupoint = document.createElement('ul');
+		  	  edupoint.setAttribute('style','padding-right:20px;');
+
+		  	  let ls_a = document.createElement('li');
+		  	  ls_a.setAttribute('style','font-size:18px;')
+		  	  ls_a.innerText = 'Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.';
+		  	  wd106.appendChild(ls_a);			        
+		  	  wd106.appendChild(edupoint);
+		  	  wd105.appendChild(wd106);
+
+		  	  wd104.appendChild(wd105);
+
+		  	  outer_div2.appendChild(wd104);
+		  	  document.body.append(outer_div2);
+
+		  	</script>
+		  </body>
+		  </html>
