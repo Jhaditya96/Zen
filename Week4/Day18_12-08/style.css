@@ -1,0 +1,23 @@
+.outerbox {
+    height: 100%;
+    margin: 50px;
+    color: black;
+    font-family: cursive;
+    border-radius: 40px;
+    background-color: #lightblue;
+}
+
+.innercontainer {
+    height:auto;
+    margin-top: 50px;
+    background-color: lightblue;
+    border-radius: 40px;
+    justify-content: center;
+}
+
+#row {
+    height:300px;
+    background-color: #lightblue;
+    border-radius: 40px;
+    border: 10px solid black;
+}
