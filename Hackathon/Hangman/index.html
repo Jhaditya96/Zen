@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hangman Game</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+	<script>
+	//-------------------------UI using DOM JS------------------------------------//
+		//Outer div	
+		let outer_container = document.createElement('div');
+		outer_container.setAttribute('class','container');
+
+		//Main heading for the Game
+		let main_header = document.createElement('h1');
+		main_header.setAttribute('class','text-center');
+		main_header.innerText = 'Hangman';
+		outer_container.appendChild(main_header);
+
+		//Side Box to count the number of attempts for the player
+		let chnc_container = document.createElement('div');
+		chnc_container.setAttribute('class','float-right');
+		chnc_container.innerText = 'Wrong Guesses: ';
+
+		//span to count number of wrong attempts done by player
+		let chnc_span = document.createElement('span');
+		chnc_span.setAttribute('id','mistakes');
+		chnc_span.innerText = '0';
+		chnc_container.appendChild(chnc_span);
+
+		//normal span text
+		let text_span = document.createElement('span');
+		text_span.innerText = '  of  ';
+		chnc_container.appendChild(text_span);
+
+		//span dom to show max attempts for player
+		let dynmic_span = document.createElement('span');
+		dynmic_span.setAttribute('id','maxWrong');
+		chnc_container.appendChild(dynmic_span);
+		outer_container.appendChild(chnc_container);
+
+		//Div container with image and keyboard
+		let inbox = document.createElement('div');
+		inbox.setAttribute('class','text-center-body');
+		let image = document.createElement('img');
+		image.setAttribute('id','hangmanPic');
+		image.setAttribute('src','./images/0.jpg');
+		image.setAttribute('alt','');
+		inbox.appendChild(image);
+
+		let sub_para = document.createElement('p');
+		sub_para.setAttribute('style','margin-top:15px;')
+		sub_para.innerText = 'Guess the Programming Language:';
+		inbox.appendChild(sub_para);
+
+		//Dynamic space secn. to show number of words to be guessed by player
+		let wordbar = document.createElement('p');
+		wordbar.setAttribute('id','wordSpotlight');
+		wordbar.innerText = 'The word to be guessed goes here';
+		inbox.appendChild(wordbar);
+
+		//keyboard container 
+		let kybrd_container = document.createElement('div');
+		kybrd_container.setAttribute('id','keyboard');
+		inbox.appendChild(kybrd_container);
+
+		//button to Restart the game:
+		let rstrt_btn = document.createElement('button');
+		rstrt_btn.setAttribute('class','btn btn-info');
+		rstrt_btn.setAttribute('onClick','reset()');
+		rstrt_btn.innerText = 'Reset';
+		inbox.appendChild(rstrt_btn);
+		outer_container.appendChild(inbox);
+		document.body.append(outer_container);
+
+		//------------------------------------------------LOGIC.JS------------------------------------------------//
+
+		var programming_languages = [
+		"python",
+		"javascript",
+		"mongodb",
+		"json",
+		"java",
+		"html",
+		"css",
+		"c",
+		"csharp",
+		"golang",
+		"kotlin",
+		"php",
+		"sql",
+		"ruby",
+		"sql",
+		"jquery",
+		"bootstrap",
+		"datastructures",
+		"swift",
+		"abap",
+		"applescript",
+		"coral",
+		"coffeescript",
+		"idris",
+		"jscript",
+		"krypton",
+		"ladder",
+		"lingo",
+		"logtalk",
+		"lynx",
+		"mercury",
+		"matlab",
+		"nix",
+		"pizza",
+		"powershell",
+		"pilot",
+		"quakec",
+		"rprogramming",
+		"scala",
+		"spark",
+		"subtext",
+		"tom",
+		"tea",
+		"telcomp",
+		"ubercode",
+		"unixshell",
+		"viper",
+		"webassembly",
+		"znotation"
+		]
+
+		let answer = '';
+		let maxWrong = 6;
+		let mistakes = 0;
+		let guessed = [];
+		let wordStatus = null;
+
+		//function to select words randomly
+		function randomWord() {
+			answer = programming_languages[Math.floor(Math.random() * programming_languages.length)];
+		}
+
+		//generate Alphabetical buttons for the player
+		function generateButtons() {
+			let buttonsHTML = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
+				`
+				<button
+				class="btn btn-lg btn-primary m-2"
+				id='` + letter + `'
+				onClick="handleGuess('` + letter + `')"
+				>
+				` + letter + `
+				</button>
+				`).join('');
+
+			document.getElementById('keyboard').innerHTML = buttonsHTML;
+		}
+
+		 //After selection
+		function handleGuess(chosenLetter) {
+			guessed.indexOf(chosenLetter) === -1 ? guessed.push(chosenLetter) : null;
+			document.getElementById(chosenLetter).setAttribute('disabled', true);
+
+			if (answer.indexOf(chosenLetter) >= 0) {
+				guessedWord();
+				checkIfGameWon();
+			} else if (answer.indexOf(chosenLetter) === -1) {
+				mistakes++;
+				updateMistakes();
+				checkIfGameLost();
+				updateHangmanPicture();
+			}
+		}
+
+		//changing picture dynamically with each wrong guess
+		function updateHangmanPicture() {
+			document.getElementById('hangmanPic').src = './images/' + mistakes + '.jpg';
+		}
+
+		//to check if player won
+		function checkIfGameWon() {
+			if (wordStatus === answer) {
+				document.getElementById('keyboard').innerHTML = 'You Won!!!';
+			}
+		}
+
+		//to check if player lost
+		function checkIfGameLost() {
+			if (mistakes === maxWrong) {
+				document.getElementById('wordSpotlight').innerHTML = 'The answer was: ' + answer;
+				document.getElementById('keyboard').innerHTML = 'You Lost!!!';
+			}
+		}
+
+		//_ _ _ _ slot made dynamically at wordSpotlight
+		function guessedWord() {
+			wordStatus = answer.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('');
+
+			document.getElementById('wordSpotlight').innerHTML = wordStatus;
+		}
+
+		//update Mistakes
+		function updateMistakes() {
+			document.getElementById('mistakes').innerHTML = mistakes;
+		}
+
+		//onclick event to restart and resetting all functions as well.
+		function reset() {
+			mistakes = 0;
+			guessed = [];
+			document.getElementById('hangmanPic').src = './images/0.jpg';
+
+			randomWord();
+			guessedWord();
+			updateMistakes();
+			generateButtons();
+		}
+
+		document.getElementById('maxWrong').innerHTML = maxWrong;
+
+		randomWord();
+		generateButtons();
+		guessedWord();
+	</script>	
+</body>
+</html>
