@@ -1,13 +1,13 @@
 //chuck
 let chunk  = function (arr: [],k:number){
-    let newarr = []
-    for(let i=0;i<arr.length;i+=k){
-        newarr.push(arr.slice(i,i+k))
-    }
-    return newarr;
+  let newarr = []
+  for(let i=0;i<arr.length;i+=k){
+      newarr.push(arr.slice(i,i+k))
   }
+  return newarr;
+}
 
-  //reduce
+//reduce
 let reduce = ( arr:[] ) => arr.reduce((total, item)=>total+item,0);
 
 //filter
