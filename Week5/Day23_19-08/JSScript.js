@@ -10,7 +10,7 @@ headerDiv.style = 'text-align:center;color:black;';
 
 body.appendChild(headerDiv);
 body.appendChild(outbox);
-let outerDiv
+
 async function getInfo(url) {
     let country = await fetch(url);
     let result = await country.json()
