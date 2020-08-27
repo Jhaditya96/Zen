@@ -1,18 +1,43 @@
 "use strict";
-//chuck
 let chunk = function (arr, k) {
-    let newarr = [];
+    let outarr = [];
     for (let i = 0; i < arr.length; i += k) {
-        newarr.push(arr.slice(i, i + k));
+        outarr.push(arr.slice(i, i + k));
     }
-    return newarr;
+    return outarr;
 };
-//reduce
-let reduce = (arr) => arr.reduce((total, item) => total + item, 0);
-//filter
-let filter = (arr) => arr.filter(data => data % 3 === 0);
-//find
-let find = (arr) => arr.filter(data => data % 7 == 0);
-//sum
-let sum = (arr) => arr.reduce((acc, item) => acc += item, 0);
- 
+let sum = function (arr) {
+    let sum = 0;
+    let i = arr.length;
+    for (i of arr) {
+        sum += i;
+    }
+    return sum;
+};
+let filter = function (arr) {
+    let outarr = [];
+    let i = arr.length;
+    for (i of arr) {
+        if (i > 5) {
+            outarr.push(i);
+        }
+    }
+    return outarr;
+};
+let find = function (arr, condition) {
+    let newarr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (condition(arr[i]) == true) {
+            newarr.push(arr[i]);
+        }
+    }
+};
+// reducer takes an array, reducer() and initialValue as argument
+function reduce(arr, reducer, initialValue) {
+    let accumulator = initialValue === undefined ? 0 : initialValue;
+    // loop though array    
+    for (let i = 0; i < arr.length; i++) {
+        accumulator = reducer(accumulator, arr[i], i, arr);
+    }
+    return accumulator;
+}
